@@ -28,7 +28,8 @@ setup(
     ],
     license='Apache 2',
     keywords=['asyncio', 'aiohttp', 'jobs', 'tasks', 'stubs', 'mypy'],
-    packages=['aiojobs-stubs'],
-    package_data={'aiojobs-stubs': ['__init__.pyi']},
+    packages=['aiojobs-stubs', 'aiojobs_protocols'],
+    package_data={'aiojobs-stubs': ['__init__.pyi'],
+                  'aiojobs_protocols': ['py.typed']},
     python_requires='>=3.8'
 )
