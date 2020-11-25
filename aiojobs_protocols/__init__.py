@@ -1,4 +1,5 @@
-from typing import Any, Awaitable, Callable, Dict, Optional, Protocol, TypeVar
+from typing import (Any, Awaitable, Callable, Dict, Optional, Protocol,
+                    TypeVar, runtime_checkable)
 
 _T = TypeVar('_T')
 _T_co = TypeVar('_T_co', covariant=True)
@@ -6,6 +7,7 @@ _Context = Dict[str, Any]
 _ExceptionHandler = Callable[['SchedulerProtocol', _Context], None]
 
 
+@runtime_checkable
 class JobProtocol(Protocol[_T_co]):
     active: bool
     pending: bool
@@ -14,6 +16,7 @@ class JobProtocol(Protocol[_T_co]):
     async def close(self, *, timeout: Optional[float] = None) -> None: ...
 
 
+@runtime_checkable
 class SchedulerProtocol(Protocol):
     limit: int
     pending_limit: int
