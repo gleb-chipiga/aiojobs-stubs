@@ -1,8 +1,10 @@
 from typing import Any, Awaitable, Callable, Dict, Generic, Optional, TypeVar
 
+from aiojobs_protocols import SchedulerProtocol
+
 _T = TypeVar('_T')
 _Context = Dict[str, Any]
-_ExceptionHandler = Callable[['Scheduler', _Context], None]
+_ExceptionHandler = Callable[[SchedulerProtocol, _Context], None]
 
 
 class Job(Generic[_T]):
