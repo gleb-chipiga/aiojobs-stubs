@@ -7,7 +7,7 @@ DIR = Path(__file__).parent
 setup(
     name='aiojobs-stubs',
     author='Gleb Chipiga',
-    version='0.3.0.post2',
+    version='1.0.0',
     description='External type annotations for the aiojobs library',
     long_description=(DIR / 'README.rst').read_text('utf-8').strip(),
     long_description_content_type='text/x-rst',
