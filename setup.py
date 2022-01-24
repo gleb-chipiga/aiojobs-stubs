@@ -17,6 +17,8 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'License :: OSI Approved :: Apache Software License',
         'Operating System :: POSIX',
         'Operating System :: MacOS :: MacOS X',
@@ -31,5 +33,6 @@ setup(
     packages=['aiojobs-stubs', 'aiojobs_protocols'],
     package_data={'aiojobs-stubs': ['__init__.pyi'],
                   'aiojobs_protocols': ['py.typed']},
-    python_requires='>=3.8'
+    python_requires='>=3.8',
+    tests_require=['types-setuptools'],
 )
